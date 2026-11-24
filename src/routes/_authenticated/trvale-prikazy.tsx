@@ -34,7 +34,7 @@ export const Route = createFileRoute("/_authenticated/trvale-prikazy")({
       { title: "Trvalé príkazy – Tatra banka" },
       { name: "description", content: "Pravidelné platby: nájomné, sporenie a ďalšie trvalé príkazy." },
       { property: "og:title", content: "Trvalé príkazy – Tatra banka" },
-      { property: "og:description", content: "Správa trvalých príkazov vo Vega banke." },
+      { property: "og:description", content: "Správa trvalých príkazov v školskom simulátore Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
