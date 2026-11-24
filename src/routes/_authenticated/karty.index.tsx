@@ -37,6 +37,7 @@ function CardsPage() {
     () =>
       cards.filter(
         (c) =>
+          c.status === "active" &&
           (tab === "all" || c.card_type === tab) &&
           (!q.trim() || c.name.toLowerCase().includes(q.trim().toLowerCase()) || c.masked_number.includes(q.trim())),
       ),
