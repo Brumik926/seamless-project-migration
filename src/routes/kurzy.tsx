@@ -12,7 +12,7 @@ export const Route = createFileRoute("/kurzy")({
       { title: "Kurzový lístok – Tatra banka" },
       { name: "description", content: "Orientačné kurzy mien a prepočet z EUR." },
       { property: "og:title", content: "Kurzový lístok – Tatra banka" },
-      { property: "og:description", content: "Orientačné kurzy mien vo Vega banke." },
+      { property: "og:description", content: "Orientačné kurzy mien v aplikácii Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
