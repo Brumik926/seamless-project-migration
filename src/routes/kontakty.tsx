@@ -53,13 +53,13 @@ function Contacts() {
     }
   }
 
-  const tile = "flex flex-col items-center gap-2 text-center text-sm";
-  const box = "grid aspect-square w-full place-items-center rounded-2xl bg-background text-primary";
+  const tile = "flex min-w-0 flex-col items-center gap-2 text-center text-sm transition-transform active:scale-[0.97]";
+  const box = "grid aspect-square w-full place-items-center rounded-2xl border border-border/60 bg-background text-primary shadow-tile";
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-md flex-col bg-canvas">
       <PageHeader title="Kontakt" back />
-      <section className="grid grid-cols-4 gap-3 px-5 py-6">
+      <section className="grid grid-cols-4 gap-3 border-b border-border/60 bg-canvas px-5 py-6">
         <a href={`tel:${PHONE.replace(/\s/g, "")}`} className={tile}><span className={box}><Phone className="h-8 w-8" strokeWidth={1.4} /></span>Zavolať</a>
         <button type="button" className={tile} onClick={() => setKind("callback")}><span className={box}><PhoneIncoming className="h-8 w-8" strokeWidth={1.4} /></span>Zavolajte mi</button>
         <button type="button" className={tile} onClick={() => setKind("meeting")}><span className={box}><CalendarDays className="h-8 w-8" strokeWidth={1.4} /></span>Dohodnúť stretnutie</button>
@@ -70,7 +70,7 @@ function Contacts() {
         <DetailRow label="Infolinka" value={<a href={`tel:${PHONE.replace(/\s/g, "")}`}>{PHONE}</a>} />
         <DetailRow label="Zo zahraničia" value={<a href="tel:+421200000000">+421 2 0000 0000</a>} />
         <DetailRow label="E-mail" value="podpora@simulator.example" />
-        <p className="mt-4 text-xs text-muted-foreground">Fiktívne kontakty – Tatra banka je simulácia.</p>
+        <p className="mt-4 rounded-lg bg-card px-3 py-3 text-xs leading-5 text-muted-foreground">Fiktívne kontakty určené iba na ukážku používateľského rozhrania. Nejde o oficiálnu zákaznícku podporu Tatra banky.</p>
       </section>
       <BottomSheet open={kind !== null} onOpenChange={(v) => !v && setKind(null)} title={kind === "meeting" ? "Dohodnúť stretnutie" : "Zavolajte mi"}>
         {session ? (
