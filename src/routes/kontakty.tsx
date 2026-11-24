@@ -58,7 +58,7 @@ function Contacts() {
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-md flex-col bg-canvas">
-      <PageHeader title="Kontakt" back />
+      <PageHeader title="Kontakt" back />\n      <section className="border-b border-border/60 bg-background px-5 py-5">\n        <p className="text-lg font-bold tracking-wide">KONTAKTNÉ CENTRUM</p>\n        <p className="mt-1 text-sm text-muted-foreground">Pomoc a požiadavky v rámci školského simulátora</p>\n      </section>
       <section className="grid grid-cols-4 gap-3 border-b border-border/60 bg-canvas px-5 py-6">
         <a href={`tel:${PHONE.replace(/\s/g, "")}`} className={tile}><span className={box}><Phone className="h-8 w-8" strokeWidth={1.4} /></span>Zavolať</a>
         <button type="button" className={tile} onClick={() => setKind("callback")}><span className={box}><PhoneIncoming className="h-8 w-8" strokeWidth={1.4} /></span>Zavolajte mi</button>
