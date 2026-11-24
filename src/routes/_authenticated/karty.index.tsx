@@ -59,14 +59,14 @@ function CardsPage() {
           onChange={setTab}
         />
       </div>
-      <div className="flex flex-col gap-4 px-5 pt-5">
+      <div className="flex flex-col gap-4 px-5 pt-5 pb-8">
         {list.length === 0 ? <EmptyState title="Žiadne karty." /> : null}
         {list.map((c) => {
           const acc = accounts.find((a) => a.id === c.account_id);
           const credit = c.card_type === "credit";
           return (
-            <Link key={c.id} to="/karty/$id" params={{ id: c.id }} className="bank-tile block overflow-hidden bg-background transition-transform active:scale-[0.99]">
-              <div className="grid grid-cols-[7rem_minmax(0,1fr)_auto] items-center gap-4 p-5">
+            <Link key={c.id} to="/karty/$id" params={{ id: c.id }} className="bank-tile block overflow-hidden rounded-2xl border border-border/60 bg-background shadow-tile transition-transform active:scale-[0.99]">
+              <div className="grid grid-cols-[6.5rem_minmax(0,1fr)_auto] items-center gap-4 p-5">
                 <CardVisual size="sm" design={c.design} brand={c.brand} cardType={c.card_type} blocked={c.status === "blocked"} />
                 <span className="min-w-0">
                   <span className="block truncate text-lg font-bold">{c.name}</span>
