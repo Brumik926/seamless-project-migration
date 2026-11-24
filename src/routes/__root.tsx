@@ -74,7 +74,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "theme-color", content: "#1c1e24" },
       { title: "Tatra banka – simulované mobilné bankovníctvo" },
       { name: "description", content: "Demo mobilné bankovníctvo s fiktívnymi údajmi a simulovanými platbami." },
-      { name: "author", content: "Tatra banka" },
+      { name: "author", content: "Školský projekt – neoficiálny simulátor" },
       { property: "og:title", content: "Tatra banka – simulované mobilné bankovníctvo" },
       { property: "og:description", content: "Demo mobilné bankovníctvo s fiktívnymi údajmi a simulovanými platbami." },
       { property: "og:type", content: "website" },
