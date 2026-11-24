@@ -38,7 +38,7 @@ export const Route = createFileRoute("/_authenticated/domov")({
       { title: "Domov – Tatra banka" },
       { name: "description", content: "Prehľad účtov, kariet, sporení a výdavkov." },
       { property: "og:title", content: "Domov – Tatra banka" },
-      { property: "og:description", content: "Prehľad účtov, kariet, sporení a výdavkov vo Vega banke." },
+      { property: "og:description", content: "Prehľad účtov, kariet, sporení a výdavkov v aplikácii Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -76,7 +76,7 @@ function Home() {
 
   return (
     <div className="flex flex-col gap-3 animate-page-in">
-      <header className="sticky top-0 z-30 grid grid-cols-3 items-center bg-background/95 px-5 pt-[calc(env(safe-area-inset-top)+1rem)] pb-4 backdrop-blur">
+      <header className="sticky top-0 z-30 grid grid-cols-3 items-center border-b border-border/60 bg-background/95 px-5 pt-[calc(env(safe-area-inset-top)+0.85rem)] pb-3 backdrop-blur supports-[backdrop-filter]:bg-background/85">
         <div className="flex">
           <HeaderIconButton label="Notifikácie" badge={unread} onClick={() => navigate({ to: "/notifikacie" })}>
             <Mail className="h-8 w-8" strokeWidth={1.5} />
