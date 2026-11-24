@@ -57,7 +57,7 @@ async function shareText(title: string, text: string, copied: string) {
 
 function ActionTile({ icon: Icon }: { icon: typeof Send }) {
   return (
-    <span className="grid aspect-square w-full place-items-center rounded-2xl bg-background text-primary">
+    <span className="grid aspect-square w-full place-items-center rounded-2xl border border-border/70 bg-card text-primary shadow-tile">
       <Icon className="h-8 w-8" strokeWidth={1.4} />
     </span>
   );
@@ -109,7 +109,8 @@ function AccountDetail() {
           <button type="button" aria-label="Premenovať účet" onClick={() => setRenameOpen(true)} className="absolute top-5 right-5 text-primary">
             <Pencil className="h-6 w-6" strokeWidth={1.5} />
           </button>
-          <h2 className="text-xl font-bold">{account.name}</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">{account.account_type === "savings" ? "Sporiaci účet" : "Bežný účet"}</p>
+          <h2 className="mt-1 text-xl font-bold">{account.name}</h2>
           <Iban value={account.iban} className="mt-2 block text-[1.05rem] text-muted-foreground" />
           <p className="mt-4 text-sm text-muted-foreground">Aktuálny zostatok</p>
           <Money value={account.balance} sensitive className="mt-1 block text-[2.4rem] font-medium" />
@@ -130,7 +131,7 @@ function AccountDetail() {
             </span>
           </Link>
         ) : null}
-        <div className="mt-2 grid grid-cols-2">
+        <div className="mt-2 grid grid-cols-2 divide-x divide-border">
           <button
             type="button"
             onClick={() =>
@@ -163,7 +164,7 @@ function AccountDetail() {
 
       <section className="bg-canvas px-5 py-6">
         <div className="grid grid-cols-4 gap-3">
-          <Link to="/pohyby" search={{ account: account.id }} className="flex flex-col items-center gap-2 text-center">
+          <Link to="/pohyby" search={{ account: account.id }} className="flex flex-col items-center gap-2 text-center transition-transform active:scale-95">
             <ActionTile icon={ArrowLeftRight} />
             <span className="text-sm">Pohyby</span>
           </Link>
