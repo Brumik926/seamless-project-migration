@@ -77,7 +77,10 @@ function Pohyby() {
   }, [transactions, account, direction, search.category, query]);
 
   const scheduled = filtered.filter((t) => t.status === "scheduled").sort((a, b) => a.execution_date.localeCompare(b.execution_date));
-  const booked = filtered.filter((t) => t.status !== "scheduled");
+  const booked = useMemo(
+    () => filtered.filter((t) => t.status !== "scheduled").sort((a, b) => new Date(b.booked_at).getTime() - new Date(a.booked_at).getTime()),
+    [filtered],
+  );
   const groups = useMemo(() => {
     const map = new Map<string, Transaction[]>();
     for (const t of booked) {
