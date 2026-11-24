@@ -128,19 +128,19 @@ function ProfilePage() {
   const f = (k: string) => ({ value: form[k] ?? "", onChange: (e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, [k]: e.target.value }), error: errors[k] });
 
   return (
-    <div className="flex flex-col gap-3 px-5 pb-6 animate-page-in">
+    <div className="flex flex-col gap-4 px-5 pb-8 animate-page-in">
       <PageHeader title="Profil" back className="-mx-5" />
-      <section className="rounded-xl bg-background px-5 shadow-tile">
+      <section className="overflow-hidden rounded-2xl border border-border/60 bg-background px-5 shadow-tile">
         <h2 className="border-b border-border py-5 text-xl font-bold">{profile.full_name || "Klient"}</h2>
-        <DetailRow className="border-t-0" label="Klientske číslo (PID)" value={profile.client_number} />
+        <DetailRow className="border-t-0" label="PID – osobné identifikačné číslo" value={profile.client_number} />
         <DetailRow label="E-mail" value={profile.email ?? "—"} />
       </section>
 
-      <section className="rounded-xl bg-background px-5 shadow-tile">
+      <section className="overflow-hidden rounded-2xl border border-border/60 bg-background px-5 shadow-tile">
         <h2 className="border-b border-border py-5 text-xl font-bold">Osobné a klientske údaje</h2>
-        <NavRow label="Osobné údaje" description={profile.birth_date ? `Narodený/á ${formatShortDate(profile.birth_date)}` : "Meno a dátum narodenia"} onClick={() => open("personal")} className="border-b border-border" />
+        <NavRow label="Identifikačné a osobné údaje" description={profile.birth_date ? `Dátum narodenia ${formatShortDate(profile.birth_date)}` : "Meno a dátum narodenia"} onClick={() => open("personal")} className="border-b border-border" />
         <NavRow label="Kontaktné údaje" description={profile.phone ?? "Telefónne číslo"} onClick={() => open("contact")} className="border-b border-border" />
-        <NavRow label="Adresa" description={[profile.street, profile.zip, profile.city].filter(Boolean).join(", ") || "Trvalý pobyt"} onClick={() => open("address")} className="border-b border-border" />
+        <NavRow label="Adresa trvalého pobytu" description={[profile.street, profile.zip, profile.city].filter(Boolean).join(", ") || "Ulica, mesto a PSČ"} onClick={() => open("address")} className="border-b border-border" />
         <NavRow label="Zmena hesla" onClick={() => open("password")} />
       </section>
 
