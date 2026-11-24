@@ -17,7 +17,7 @@ export const Route = createFileRoute("/kontakty")({
       { title: "Kontakty a podpora – Tatra banka" },
       { name: "description", content: "Zavolajte nám, požiadajte o spätné zavolanie alebo si dohodnite stretnutie." },
       { property: "og:title", content: "Kontakty a podpora – Tatra banka" },
-      { property: "og:description", content: "Kontakty a podpora Vega banky." },
+      { property: "og:description", content: "Kontakty a podpora aplikácie Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
