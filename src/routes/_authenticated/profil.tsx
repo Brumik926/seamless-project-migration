@@ -144,7 +144,7 @@ function ProfilePage() {
         <NavRow label="Zmena hesla" onClick={() => open("password")} />
       </section>
 
-      <section className="rounded-xl bg-background px-5 shadow-tile">
+      <section className="overflow-hidden rounded-2xl border border-border/60 bg-background px-5 shadow-tile">
         <h2 className="border-b border-border py-5 text-xl font-bold">Povolenia</h2>
         <ToggleRow
           id="marketing"
