@@ -23,7 +23,7 @@ export const Route = createFileRoute("/_authenticated/profil")({
       { title: "Profil – Tatra banka" },
       { name: "description", content: "Osobné a kontaktné údaje, adresa a zmena hesla." },
       { property: "og:title", content: "Profil – Tatra banka" },
-      { property: "og:description", content: "Osobný profil klienta Vega banky." },
+      { property: "og:description", content: "Osobný profil klienta aplikácie Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -149,7 +149,7 @@ function ProfilePage() {
         <ToggleRow
           id="marketing"
           label="Marketingové notifikácie"
-          description="Ponuky a novinky Vega banky"
+          description="Ponuky a novinky aplikácie Tatra banka"
           checked={settings.notify_marketing}
           disabled={marketing.isPending}
           onCheckedChange={(v) => marketing.mutate(v, { onSuccess: () => toast.success("Uložené"), onError: (e) => toast.error(bankErrorMessage(e)) })}
