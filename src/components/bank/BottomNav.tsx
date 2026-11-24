@@ -29,9 +29,9 @@ export function BottomNav({ navItem = "karty" }: { navItem?: NavItemKey }) {
   return (
     <nav
       aria-label="Hlavná navigácia"
-      className="fixed inset-x-0 bottom-0 z-40 mx-auto max-w-md border-t border-border bg-nav safe-bottom"
+      className="fixed inset-x-0 bottom-0 z-40 mx-auto w-full max-w-md border-t border-border/80 bg-nav/95 shadow-[0_-6px_24px_-20px_rgba(0,0,0,0.35)] backdrop-blur safe-bottom"
     >
-      <ul className="grid h-[5.25rem] grid-cols-5 items-end">
+      <ul className="grid h-[4.75rem] grid-cols-5 items-end">
         {items.map((item, i) => {
           const active = i === activeIndex;
           const Icon = item.icon;
@@ -41,7 +41,7 @@ export function BottomNav({ navItem = "karty" }: { navItem?: NavItemKey }) {
                 to={item.to}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "relative flex w-full flex-col items-center justify-end gap-1 pb-3 text-[0.8rem] font-medium transition-colors",
+                  "relative flex w-full flex-col items-center justify-end gap-1 pb-2.5 text-[0.72rem] font-semibold transition-colors",
                   active ? "text-primary" : "text-foreground/90 hover:text-foreground",
                 )}
               >
@@ -49,12 +49,12 @@ export function BottomNav({ navItem = "karty" }: { navItem?: NavItemKey }) {
                   <span
                     aria-hidden="true"
                     className={cn(
-                      "absolute -top-5 left-1/2 h-[5.4rem] w-[5.4rem] -translate-x-1/2 rounded-full border-2 border-b-transparent bg-nav transition-colors",
+                      "absolute -top-[1.15rem] left-1/2 h-[3.35rem] w-[3.35rem] -translate-x-1/2 rounded-full border border-primary/70 bg-nav shadow-[0_3px_12px_-6px_rgba(0,0,0,0.4)] transition-colors",
                       active ? "border-primary" : "border-primary/70",
                     )}
                   />
                 ) : null}
-                <Icon className="relative h-7 w-7" strokeWidth={1.5} />
+                <Icon className={cn("relative h-6 w-6", item.center && "-mt-2")} strokeWidth={1.7} />
                 <span className="relative max-w-full truncate px-1">{item.label}</span>
               </Link>
             </li>
