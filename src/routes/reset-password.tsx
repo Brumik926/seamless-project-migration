@@ -11,7 +11,7 @@ export const Route = createFileRoute("/reset-password")({
   head: () => ({
     meta: [
       { title: "Nové heslo – Tatra banka" },
-      { name: "description", content: "Nastavte si nové heslo do Vega banky." },
+      { name: "description", content: "Nastavte si nové heslo do aplikácie Tatra banka." },
       { property: "og:title", content: "Nové heslo – Tatra banka" },
       { property: "og:description", content: "Nastavenie nového hesla do simulovaného bankovníctva." },
       { property: "og:type", content: "website" },
