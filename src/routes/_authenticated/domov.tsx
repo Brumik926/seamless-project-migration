@@ -75,7 +75,7 @@ function Home() {
   const summary = useMemo(() => summarizeMonth(transactions, month), [transactions, month]);
 
   return (
-    <div className="flex flex-col gap-3 animate-page-in">
+    <div className="flex flex-col gap-3 pb-8 animate-page-in">
       <header className="sticky top-0 z-30 grid grid-cols-3 items-center border-b border-border/60 bg-background/95 px-5 pt-[calc(env(safe-area-inset-top)+0.85rem)] pb-3 backdrop-blur supports-[backdrop-filter]:bg-background/85">
         <div className="flex">
           <HeaderIconButton label="Notifikácie" badge={unread} onClick={() => navigate({ to: "/notifikacie" })}>
@@ -179,7 +179,7 @@ function Home() {
       ) : null}
 
       {settings.show_spending ? (
-        <Section title="Prehľad výdavkov" action={<Link to="/mafin">Detail</Link>}>
+        <Section title="Spending report" action={<Link to="/mafin">Detail</Link>}>
           <div className="text-center">
             <p className="text-[1.05rem] text-muted-foreground">Rozdiel tento mesiac</p>
             <Money
@@ -237,7 +237,7 @@ function Home() {
         </Section>
       ) : null}
 
-      <div className="flex justify-center py-6">
+      <div className="flex justify-center py-6 pb-10">
         <button type="button" onClick={() => setEditOpen(true)} className="flex items-center gap-2 text-[0.95rem] font-medium text-link">
           <SlidersHorizontal className="h-5 w-5" /> Upraviť domovskú obrazovku
         </button>
