@@ -24,7 +24,7 @@ export const Route = createFileRoute("/_authenticated/transakcia/$id")({
       { title: "Detail pohybu – Tatra banka" },
       { name: "description", content: "Podrobnosti transakcie: suma, protistrana, symboly a správa." },
       { property: "og:title", content: "Detail pohybu – Tatra banka" },
-      { property: "og:description", content: "Podrobnosti transakcie vo Vega banke." },
+      { property: "og:description", content: "Podrobnosti transakcie v školskom simulátore Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -133,14 +133,14 @@ function TransactionDetail() {
   return (
     <div className="flex flex-col gap-3 animate-page-in">
       <PageHeader title="Detail pohybu" back />
-      <section className="bank-section text-center">
+      <section className="bank-section relative overflow-hidden text-center">
         <p className="text-[1.05rem] text-muted-foreground">{txTypeLabel(tx.tx_type, tx.direction)}</p>
         <Money
           value={tx.amount}
           signed={incoming ? "in" : "out"}
-          className={cn("mt-2 block text-[2.4rem] font-extrabold", incoming ? "text-positive" : "text-negative", tx.status !== "completed" && "text-muted-foreground")}
+          className={cn("mt-3 block text-[2.55rem] font-bold tracking-tight", incoming ? "text-positive" : "text-negative", tx.status !== "completed" && "text-muted-foreground")}
         />
-        <h2 className="mt-2 text-xl font-bold">{tx.counterparty_name || "Bez názvu"}</h2>
+        <h2 className="mt-3 text-xl font-bold">{tx.counterparty_name || "Bez názvu"}</h2>
         <p className={cn("mt-3 inline-flex items-center gap-2 rounded-full bg-card px-4 py-1.5 text-sm font-semibold", status.cls)}>
           <StatusIcon className="h-4 w-4" /> {status.label}
         </p>
