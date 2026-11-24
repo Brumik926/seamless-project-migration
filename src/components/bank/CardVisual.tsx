@@ -23,19 +23,24 @@ export function CardVisual({ design, brand, cardType, holder, number, blocked, s
   return (
     <div
       className={cn(
-        "relative aspect-[1.586] overflow-hidden rounded-xl shadow-tile",
-        size === "sm" ? "w-28 rounded-md" : "w-full",
+        "relative aspect-[1.586] overflow-hidden rounded-2xl border border-white/15 shadow-[0_14px_32px_-16px_rgba(0,0,0,0.55)]",
+        size === "sm" ? "w-28 rounded-lg" : "w-full",
         className,
       )}
       role="img"
       aria-label={`${brand} ${cardType === "credit" ? "kreditná" : "debetná"} karta${number ? " " + number : ""}`}
     >
       <img src={DESIGNS[design] ?? forest.url} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-black/25" />
       <div className={cn("absolute inset-0", dark ? "text-paper" : "text-ink")}>
         <VegaMark className={cn("absolute", size === "sm" ? "top-1.5 left-1.5 h-4 w-4" : "top-4 left-4 h-9 w-9")} />
         {size === "lg" ? (
           <>
-            <div className="absolute top-[38%] left-[9%] h-[17%] w-[13%] rounded-md bg-gradient-to-br from-chart-6/90 to-chart-1/70 ring-1 ring-black/20" />
+            <div className="absolute top-[38%] left-[9%] h-[18%] w-[13%] overflow-hidden rounded-md border border-black/20 bg-gradient-to-br from-[#F7E6B0] via-[#C7B47C] to-[#8F8058] shadow-sm">
+              <span className="absolute top-0 left-1/2 h-full w-px bg-black/20" />
+              <span className="absolute top-1/2 left-0 h-px w-full bg-black/20" />
+              <span className="absolute top-0 left-1/4 h-full w-1/2 rounded-sm border-x border-black/15" />
+            </div>
             {number ? (
               <div className="absolute bottom-[22%] left-[9%] text-sm font-semibold tracking-[0.18em] drop-shadow">{number}</div>
             ) : null}
@@ -52,9 +57,9 @@ export function CardVisual({ design, brand, cardType, holder, number, blocked, s
             size === "sm" ? "text-[0.6rem]" : "text-2xl",
           )}
         >
-          {brand === "VISA" ? "VISA" : "mastercard"}
+          {brand.toUpperCase().includes("VISA") ? "VISA" : "mastercard"}
           {size === "lg" ? (
-            <div className="text-[0.6rem] font-medium not-italic">{cardType === "credit" ? "Credit" : "Debit"}</div>
+            <div className="text-[0.6rem] font-medium not-italic">{cardType === "credit" ? "Kreditná" : "Debetná"}</div>
           ) : null}
         </div>
       </div>
