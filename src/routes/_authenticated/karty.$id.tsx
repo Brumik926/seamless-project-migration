@@ -86,7 +86,10 @@ function CardDetail() {
     (p: Record<LimitKey, number>) => updateCardLimits(id, p),
     [qk.cardLimits(id), qk.notifications],
   );
-  const cardTx = useMemo(() => transactions.filter((t) => t.card_id === id).slice(0, 5), [transactions, id]);
+  const cardTx = useMemo(
+    () => transactions.filter((t) => t.card_id === id).sort((a, b) => b.booked_at.localeCompare(a.booked_at)).slice(0, 5),
+    [transactions, id],
+  );
 
   if (!card) {
     return (
