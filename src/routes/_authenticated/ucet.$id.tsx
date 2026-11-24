@@ -190,7 +190,7 @@ function AccountDetail() {
         <BalanceChart data={history} />
       </Section>
 
-      <Section title="Viac informácií">
+      <Section title="Viac informácií" className="pb-8">
         <DetailRow label="Účtovný zostatok" value={<Money value={account.balance} sensitive />} />
         <DetailRow label="Disponibilný zostatok" value={<Money value={Math.max(0, Number(account.balance) - held)} sensitive />} />
         <DetailRow label="Naplánované platby" value={<Money value={held} />} />
