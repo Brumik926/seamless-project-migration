@@ -63,13 +63,13 @@ function Contacts() {
         <a href={`tel:${PHONE.replace(/\s/g, "")}`} className={tile}><span className={box}><Phone className="h-8 w-8" strokeWidth={1.4} /></span>Zavolať</a>
         <button type="button" className={tile} onClick={() => setKind("callback")}><span className={box}><PhoneIncoming className="h-8 w-8" strokeWidth={1.4} /></span>Zavolajte mi</button>
         <button type="button" className={tile} onClick={() => setKind("meeting")}><span className={box}><CalendarDays className="h-8 w-8" strokeWidth={1.4} /></span>Dohodnúť stretnutie</button>
-        <a href="mailto:podpora@vegabanka.example" className={tile}><span className={box}><Mail className="h-8 w-8" strokeWidth={1.4} /></span>Napísať e-mail</a>
+        <a href="mailto:podpora@simulator.example" className={tile}><span className={box}><Mail className="h-8 w-8" strokeWidth={1.4} /></span>Napísať e-mail</a>
       </section>
       <section className="bank-section">
         <h2 className="mb-2 text-[1.45rem] font-extrabold">Kontakt</h2>
         <DetailRow label="Infolinka" value={<a href={`tel:${PHONE.replace(/\s/g, "")}`}>{PHONE}</a>} />
         <DetailRow label="Zo zahraničia" value={<a href="tel:+421200000000">+421 2 0000 0000</a>} />
-        <DetailRow label="E-mail" value="podpora@vegabanka.example" />
+        <DetailRow label="E-mail" value="podpora@simulator.example" />
         <p className="mt-4 text-xs text-muted-foreground">Fiktívne kontakty – Tatra banka je simulácia.</p>
       </section>
       <BottomSheet open={kind !== null} onOpenChange={(v) => !v && setKind(null)} title={kind === "meeting" ? "Dohodnúť stretnutie" : "Zavolajte mi"}>
