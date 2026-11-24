@@ -268,13 +268,25 @@ function CardsSection({ cards, accounts }: { cards: Card[]; accounts: { id: stri
         ref={scroller}
         onScroll={(e) => {
           const el = e.currentTarget;
-          const i = Math.round(el.scrollLeft / (el.clientWidth * 0.72));
-          if (i !== index) setIndex(Math.max(0, Math.min(cards.length - 1, i)));
+          const center = el.getBoundingClientRect().left + el.clientWidth / 2;
+          const children = Array.from(el.children);
+          let nearest = 0;
+          let distance = Number.POSITIVE_INFINITY;
+          children.forEach((child, i) => {
+            const rect = child.getBoundingClientRect();
+            const childCenter = rect.left + rect.width / 2;
+            const nextDistance = Math.abs(center - childCenter);
+            if (nextDistance < distance) {
+              distance = nextDistance;
+              nearest = i;
+            }
+          });
+          if (nearest !== index) setIndex(nearest);
         }}
-        className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[14%]"
+        className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[11%] pb-1"
       >
         {cards.map((c) => (
-          <Link key={c.id} to="/karty/$id" params={{ id: c.id }} className="w-[72%] shrink-0 snap-center first:ml-0">
+          <Link key={c.id} to="/karty/$id" params={{ id: c.id }} className="w-[78%] max-w-[19rem] shrink-0 snap-center">
             <CardVisual design={c.design} brand={c.brand} cardType={c.card_type} blocked={c.status === "blocked"} />
           </Link>
         ))}
@@ -294,7 +306,7 @@ function CardsSection({ cards, accounts }: { cards: Card[]; accounts: { id: stri
           {isCredit ? (
             <>
               <div className="mt-2 h-2 w-40 overflow-hidden rounded-full bg-muted">
-                <div className="h-full rounded-full bg-primary" style={{ width: `${limit ? (available / limit) * 100 : 0}%` }} />
+                <div className="h-full rounded-full bg-primary" style={{ width: `${limit ? Math.max(0, Math.min(100, (available / limit) * 100)) : 0}%` }} />
               </div>
               <p className="mt-1.5 text-sm text-muted-foreground">Z úver. rámca {formatAmount(limit)} EUR</p>
             </>
