@@ -10,9 +10,9 @@ export const Route = createFileRoute("/_authenticated/menu")({
   head: () => ({
     meta: [
       { title: "Menu – Tatra banka" },
-      { name: "description", content: "Hlavné menu Vega banky." },
+      { name: "description", content: "Hlavné menu aplikácie Tatra banka." },
       { property: "og:title", content: "Menu – Tatra banka" },
-      { property: "og:description", content: "Hlavné menu Vega banky." },
+      { property: "og:description", content: "Hlavné menu aplikácie Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
