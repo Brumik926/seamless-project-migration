@@ -17,7 +17,7 @@ export function PageHeader({ title, back, right, className, children }: Props) {
   return (
     <header
       className={cn(
-        "sticky top-0 z-30 bg-background/95 px-5 pt-[calc(env(safe-area-inset-top)+1rem)] pb-4 backdrop-blur",
+        "sticky top-0 z-30 border-b border-border/60 bg-background/95 px-5 pt-[calc(env(safe-area-inset-top)+0.9rem)] pb-3 backdrop-blur supports-[backdrop-filter]:bg-background/85",
         className,
       )}
     >
@@ -39,7 +39,7 @@ export function PageHeader({ title, back, right, className, children }: Props) {
               </button>
             )
           ) : null}
-          <h1 className="truncate text-[1.6rem] font-extrabold tracking-tight">{title}</h1>
+          <h1 className="truncate text-[1.45rem] font-bold tracking-tight">{title}</h1>
         </div>
         {right ? <div className="flex shrink-0 items-center gap-3">{right}</div> : null}
       </div>
