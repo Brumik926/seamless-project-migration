@@ -35,7 +35,7 @@ export const Route = createFileRoute("/_authenticated/karty/$id")({
       { title: "Detail karty – Tatra banka" },
       { name: "description", content: "Blokovanie karty, internetové platby a denné limity." },
       { property: "og:title", content: "Detail karty – Tatra banka" },
-      { property: "og:description", content: "Nastavenia platobnej karty vo Vega banke." },
+      { property: "og:description", content: "Nastavenia platobnej karty v aplikácii Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
