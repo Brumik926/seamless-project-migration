@@ -28,7 +28,7 @@ export const Route = createFileRoute("/_authenticated/ucet/$id")({
       { title: "Detail účtu – Tatra banka" },
       { name: "description", content: "Zostatok, IBAN, vývoj zostatkov a informácie o účte." },
       { property: "og:title", content: "Detail účtu – Tatra banka" },
-      { property: "og:description", content: "Detail účtu vo Vega banke." },
+      { property: "og:description", content: "Detail účtu v aplikácii Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
