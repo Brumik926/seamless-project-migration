@@ -18,7 +18,7 @@ export const Route = createFileRoute("/_authenticated/karty/")({
       { title: "Zoznam kariet – Tatra banka" },
       { name: "description", content: "Debetné a kreditné karty, disponibilné zostatky a nastavenia." },
       { property: "og:title", content: "Zoznam kariet – Tatra banka" },
-      { property: "og:description", content: "Platobné karty vo Vega banke." },
+      { property: "og:description", content: "Prehľad a správa platobných kariet v školskom bankovom simulátore." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
