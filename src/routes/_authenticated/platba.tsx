@@ -370,7 +370,7 @@ function PaymentPage() {
             Späť na úpravu
           </Button>
           <p className="flex items-center justify-center gap-2 text-center text-xs text-muted-foreground">
-            <ShieldCheck className="h-4 w-4 shrink-0" /> Simulácia – peniaze sa presunú len v rámci Vega banky.
+            <ShieldCheck className="h-4 w-4 shrink-0" /> Simulácia – peniaze sa presunú iba medzi fiktívnymi účtami simulátora.
           </p>
         </section>
       </div>
