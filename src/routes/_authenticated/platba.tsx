@@ -47,7 +47,7 @@ export const Route = createFileRoute("/_authenticated/platba")({
       { title: "Nová platba – Tatra banka" },
       { name: "description", content: "Zadajte simulovanú SEPA platbu s IBAN, sumou a symbolmi." },
       { property: "og:title", content: "Nová platba – Tatra banka" },
-      { property: "og:description", content: "Simulovaná platba vo Vega banke." },
+      { property: "og:description", content: "Simulovaná platba v školskom simulátore Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
