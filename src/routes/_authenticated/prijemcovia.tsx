@@ -47,7 +47,7 @@ export const Route = createFileRoute("/_authenticated/prijemcovia")({
       { title: "Príjemcovia a šablóny – Tatra banka" },
       { name: "description", content: "Uložení príjemcovia platieb a platobné šablóny." },
       { property: "og:title", content: "Príjemcovia a šablóny – Tatra banka" },
-      { property: "og:description", content: "Správa príjemcov a šablón platieb v školskom simulátore Tatra banka." },
+      { property: "og:description", content: "Správa príjemcov a šablón platieb v mobilnom bankovníctve Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],

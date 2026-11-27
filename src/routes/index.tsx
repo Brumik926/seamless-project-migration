@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
         name: "description",
         content: "Prihláste sa do mobilného bankovníctva Tatra banka: účty, karty, platby a prehľad výdavkov.",
       },
-      { property: "og:title", content: "Tatra banka – vitajte v simulovanom bankovníctve" },
+      { property: "og:title", content: "Tatra banka – vitajte vo svete inovatívneho bankovníctva" },
       {
         property: "og:description",
         content: "Mobilné bankovníctvo Tatra banka.",

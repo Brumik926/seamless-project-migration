@@ -17,7 +17,7 @@ export const Route = createFileRoute("/_authenticated/notifikacie")({
       { title: "Notifikácie – Tatra banka" },
       { name: "description", content: "Správy o platbách, kartách a bezpečnosti." },
       { property: "og:title", content: "Notifikácie – Tatra banka" },
-      { property: "og:description", content: "Správy v školskom bankovom simulátore." },
+      { property: "og:description", content: "Správy a notifikácie v mobilnom bankovníctve Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],

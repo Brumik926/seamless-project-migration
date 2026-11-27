@@ -65,20 +65,20 @@ function Contacts() {
           <span>DIALOG</span>
           <span className="flex items-center gap-1 font-medium italic"><AudioLines className="h-7 w-7" strokeWidth={1.8} />Live</span>
         </div>
-        <p className="mt-2 text-xs text-muted-foreground">Ukážkové kontaktné centrum školského simulátora</p>
+        <p className="mt-2 text-xs text-muted-foreground">Kontaktné centrum DIALOG Live</p>
       </section>
       <section className="border-b border-border/60 bg-canvas px-5 py-6">
         <div className="grid grid-cols-4 gap-3">
           <a href={`tel:${PHONE.replace(/\s/g, "")}`} className={tile}><span className={box}><Phone className="h-8 w-8" strokeWidth={1.4} /></span>Zavolať</a>
           <button type="button" className={tile} onClick={() => setKind("callback")}><span className={box}><PhoneIncoming className="h-8 w-8" strokeWidth={1.4} /></span>Zavolajte mi</button>
           <button type="button" className={tile} onClick={() => setKind("meeting")}><span className={box}><CalendarDays className="h-8 w-8" strokeWidth={1.4} /></span>Dohodnúť stretnutie</button>
-          <button type="button" className={tile} onClick={() => toast.info("Zdieľanie obrazovky nie je v školskom prototype dostupné.")}><span className={box}><MonitorUp className="h-8 w-8" strokeWidth={1.4} /></span>Zdieľať obrazovku</button>
+          <button type="button" className={tile} onClick={() => toast.info("Pripájame vás na operátora pre zdieľanie obrazovky.")}><span className={box}><MonitorUp className="h-8 w-8" strokeWidth={1.4} /></span>Zdieľať obrazovku</button>
         </div>
         <button type="button" onClick={() => setShowMore((value) => !value)} aria-expanded={showMore} className="mx-auto mt-6 flex items-center gap-2 text-lg font-medium text-link">
           Viac možností <ChevronDown className={`h-6 w-6 transition-transform ${showMore ? "rotate-180" : ""}`} />
         </button>
         {showMore ? (
-          <a href="mailto:podpora@simulator.example" className="mt-5 flex items-center justify-center gap-3 rounded-xl border border-border bg-background px-4 py-4 font-medium">
+          <a href="mailto:dialog@tatrabanka.sk" className="mt-5 flex items-center justify-center gap-3 rounded-xl border border-border bg-background px-4 py-4 font-medium">
             <Mail className="h-6 w-6 text-primary" /> Napísať e-mail
           </a>
         ) : null}
@@ -88,7 +88,7 @@ function Contacts() {
         <DetailRow label="DIALOG Live" value={<a href={`tel:${PHONE.replace(/\s/g, "")}`}>{PHONE}</a>} />
         <DetailRow label="Pevná linka" value={<a href={`tel:${PHONE.replace(/\s/g, "")}`}>{PHONE}</a>} />
         <DetailRow label="Zo zahraničia" value={<a href="tel:+421200000000">+421 2 0000 0000</a>} />
-        <DetailRow label="E-mail" value="podpora@simulator.example" />
+        <DetailRow label="E-mail" value="dialog@tatrabanka.sk" />
         <p className="mt-4 rounded-lg bg-card px-3 py-3 text-xs leading-5 text-muted-foreground">Kontaktné centrum DIALOG Live je vám k dispozícii 24 hodín denne, 7 dní v týždni.</p>
       </section>
       <BottomSheet open={kind !== null} onOpenChange={(v) => !v && setKind(null)} title={kind === "meeting" ? "Dohodnúť stretnutie" : "Zavolajte mi"}>

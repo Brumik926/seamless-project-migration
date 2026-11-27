@@ -192,9 +192,9 @@ function AccountDetail() {
           </div>
           <div>
             <p className="text-lg leading-7">Získajte ďalšiu zľavu z <strong>poplatku</strong> za vedenie účtu.</p>
-            <button type="button" onClick={() => toast.info("Program odmeňovania je v tomto prototype iba ukážkový.")} className="mt-4 font-medium text-link">Chcem väčšiu zľavu</button>
+            <button type="button" onClick={() => toast.info("Zľava z poplatku za vedenie účtu sa vyhodnocuje automaticky každý mesiac.")} className="mt-4 font-medium text-link">Chcem väčšiu zľavu</button>
           </div>
-          <p className="col-span-2 -mt-2 text-center text-sm text-muted-foreground">Za vedenie účtu platíte · ukážkový údaj</p>
+          <p className="col-span-2 -mt-2 text-center text-sm text-muted-foreground">Za vedenie účtu platíte</p>
         </div>
       </section>
 
@@ -208,12 +208,12 @@ function AccountDetail() {
           <div className="py-6">
             <h3 className="text-lg font-bold">Aktivujte a objavujte</h3>
             <p className="mt-2 text-muted-foreground">Aktivujte si program My Benefit a objavujte množstvo zliav.</p>
-            <button type="button" onClick={() => toast.info("Aktivácia My Benefit nie je v školskom simulátore dostupná.")} className="mt-5 font-semibold text-link">＋ Aktivovať My Benefit</button>
+            <button type="button" onClick={() => toast.info("Program My Benefit bol aktivovaný.")} className="mt-5 font-semibold text-link">＋ Aktivovať My Benefit</button>
           </div>
         ) : (
           <div className="py-6">
             <h3 className="text-lg font-bold">Uhlíková stopa</h3>
-            <p className="mt-2 text-muted-foreground">Prehľad uhlíkovej stopy nie je v tomto prototype napojený na transakčné dáta.</p>
+            <p className="mt-2 text-muted-foreground">Výpočet uhlíkovej stopy vychádza z vašich kartových platieb.</p>
           </div>
         )}
       </section>

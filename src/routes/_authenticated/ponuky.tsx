@@ -9,9 +9,9 @@ export const Route = createFileRoute("/_authenticated/ponuky")({
   head: () => ({
     meta: [
       { title: "Ponuky – Tatra banka" },
-      { name: "description", content: "Prehľad osobných a firemných finančných produktov v školskom simulátore." },
+      { name: "description", content: "Prehľad osobných a firemných finančných produktov Tatra banky." },
       { property: "og:title", content: "Ponuky – Tatra banka" },
-      { property: "og:description", content: "Prehľad ukážkových osobných a firemných financií." },
+      { property: "og:description", content: "Prehľad osobných a firemných financií." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -26,16 +26,16 @@ const TABS = {
 
 const DETAILS: Record<string, string> = {
   "Osobné účty": "Prehľad bežných a sporiacich účtov pre každodenné financie.",
-  "Úvery": "Ukážková kategória úverových produktov. Nejde o ponuku ani predschválenie financovania.",
-  "Sporenia a vklady": "Informácie o možnostiach sporenia a termínovaných vkladov v rámci ukážkového rozhrania.",
+  "Úvery": "Bezúčelový úver a spotrebné financovanie s rýchlym vybavením online.",
+  "Sporenia a vklady": "Pravidelné sporenie a termínované vklady s výhodným úročením.",
   "Kreditné karty": "Prehľad kreditných kariet s cestovným poistením a programom odmien.",
-  "Poistenia": "Informačná kategória poistenia; simulátor neposkytuje poistné zmluvy.",
+  "Poistenia": "Cestovné poistenie, poistenie nehnuteľnosti a poistenie splácania úveru.",
   "Investície": "Prehľad investičných možností a podielových fondov.",
-  "Podnikateľské účty": "Ukážkový prehľad účtov pre podnikateľov.",
+  "Podnikateľské účty": "Podnikateľské účty a balíky služieb pre živnostníkov a firmy.",
   "Párovanie platieb": "Informačný prehľad možností párovania platieb.",
-  "Termínované vklady": "Ukážková kategória termínovaných vkladov.",
+  "Termínované vklady": "Zhodnotenie voľných firemných prostriedkov na termínovanom vklade.",
   "Financovanie": "Informačný prehľad firemného financovania.",
-  "Platobné nástroje": "Ukážková kategória platobných nástrojov pre podnikateľov.",
+  "Platobné nástroje": "POS terminály, platobná brána TatraPay+ a firemné platobné karty.",
 };
 
 function Ponuky() {

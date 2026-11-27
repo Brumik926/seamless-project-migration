@@ -24,7 +24,7 @@ export const Route = createFileRoute("/_authenticated/transakcia/$id")({
       { title: "Detail pohybu – Tatra banka" },
       { name: "description", content: "Podrobnosti transakcie: suma, protistrana, symboly a správa." },
       { property: "og:title", content: "Detail pohybu – Tatra banka" },
-      { property: "og:description", content: "Podrobnosti transakcie v školskom simulátore Tatra banka." },
+      { property: "og:description", content: "Podrobnosti transakcie v mobilnom bankovníctve Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
