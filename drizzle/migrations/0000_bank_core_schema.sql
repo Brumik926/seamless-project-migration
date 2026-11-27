@@ -553,7 +553,7 @@ begin
 
   v_cur_iban := public.generate_sk_iban();
   insert into public.accounts(user_id, name, iban, balance, account_type, is_primary)
-  values (p_user, 'Bežný účet', v_cur_iban, 1140.00, 'current', true) returning id into v_cur;
+  values (p_user, 'Bežný účet', v_cur_iban, 28743.23, 'current', true) returning id into v_cur;
   v_sav_iban := public.generate_sk_iban();
   insert into public.accounts(user_id, name, iban, balance, account_type, is_primary)
   values (p_user, 'Sporiaci účet', v_sav_iban, 1660.00, 'savings', false) returning id into v_sav;
