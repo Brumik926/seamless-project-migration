@@ -45,8 +45,10 @@ function Welcome() {
         </div>
 
         <div className="relative mt-auto px-6 pb-6">
-          <h1 className="text-center text-[2rem] leading-tight font-normal">
-            Vitajte vo svete <strong className="font-extrabold">inovatívneho bankovníctva</strong>
+          <h1 className="text-center text-[1.65rem] leading-snug font-normal">
+            Vitajte vo svete <strong className="font-extrabold">inovatívneho</strong>
+            <br />
+            <strong className="font-extrabold">bankovníctva</strong>
           </h1>
           <div className="mt-8 flex flex-col gap-4">
             {session ? (
@@ -69,7 +71,7 @@ function Welcome() {
             )}
           </div>
           <p className="mt-5 text-center text-sm text-muted-foreground">
-            {BANK_NAME.toUpperCase()} 1.0 · žiadne skutočné platby
+            {BANK_NAME.toUpperCase()} 3.27.7
           </p>
           <p className="mt-1 text-center text-sm text-muted-foreground">
             Aktuálny bankový deň: {formatShortDate(new Date())}
