@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1795336064886,
+      "tag": "0000_bank_core_schema",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795336394330,
+      "tag": "0001_support_requests_and_nav_item",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795336759669,
+      "tag": "0002_accounts_rename",
+      "breakpoints": true
+    }
+  ]
+}

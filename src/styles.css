@@ -1,0 +1,276 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Tatra banka design system.
+ * Surfaces: --canvas (gaps between sections), --background (section surface),
+ * --card (raised tile inside a section), --field (input wells).
+ * Money colors: --positive / --negative. Accent: --primary (bank blue).
+ */
+
+@theme inline {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-canvas: var(--canvas);
+  --color-field: var(--field);
+  --color-field-foreground: var(--field-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-link: var(--link);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-positive: var(--positive);
+  --color-negative: var(--negative);
+  --color-warning: var(--warning);
+  --color-savings: var(--savings);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-nav: var(--nav);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --shadow-tile: var(--shadow-tile);
+  --shadow-button: var(--shadow-button);
+}
+
+/* Light theme (TBDS light tokens) */
+:root {
+  --radius: 0.75rem;
+  --ink: #111216;
+  --paper: #FFFFFF;
+  --canvas: #F2F3F5;
+  --background: #FFFFFF;
+  --foreground: #111216;
+  --field: #EEF0F3;
+  --field-foreground: #111216;
+  --card: #FFFFFF;
+  --card-foreground: #111216;
+  --popover: #FFFFFF;
+  --popover-foreground: #111216;
+  --primary: #0097FD;
+  --primary-foreground: #FFFFFF;
+  --primary-glow: #38ACFD;
+  --link: #0097FD;
+  --secondary: #EEF0F3;
+  --secondary-foreground: #111216;
+  --muted: #EEF0F3;
+  --muted-foreground: #6B6E78;
+  --accent: #E5F3FF;
+  --accent-foreground: #0077D4;
+  --destructive: #D23F45;
+  --destructive-foreground: #FFFFFF;
+  --positive: #0E9F66;
+  --negative: #D23F45;
+  --warning: #D9822B;
+  --savings: #6B4124;
+  --border: #E1E3E8;
+  --input: #E1E3E8;
+  --ring: #0097FD;
+  --nav: #FFFFFF;
+  --chart-1: #0097FD;
+  --chart-2: #0E9F66;
+  --chart-3: #D9822B;
+  --chart-4: #6B4124;
+  --chart-5: #D23F45;
+  --chart-6: #8E9099;
+  --shadow-tile: 0 1px 3px rgba(0, 0, 0, 0.05), 0 8px 24px -12px rgba(0, 0, 0, 0.12);
+  --shadow-button: 0 10px 24px -12px rgba(0, 151, 253, 0.4);
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #111216;
+  --sidebar-primary: #0097FD;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EEF0F3;
+  --sidebar-accent-foreground: #111216;
+  --sidebar-border: #E1E3E8;
+  --sidebar-ring: #0097FD;
+}
+
+/* Dark theme (TBDS dark tokens, matching official Tatra banka app) */
+.dark {
+  --canvas: #000000;
+  --background: #1D1E23;
+  --foreground: #FFFFFF;
+  --field: #100F15;
+  --field-foreground: #FFFFFF;
+  --card: #1D1E23;
+  --card-foreground: #FFFFFF;
+  --popover: #1D1E23;
+  --popover-foreground: #FFFFFF;
+  --primary: #0097FD;
+  --primary-foreground: #FFFFFF;
+  --primary-glow: #38ACFD;
+  --link: #0097FD;
+  --secondary: #2A2D3B;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A2D3B;
+  --muted-foreground: #8E9099;
+  --accent: #152A3D;
+  --accent-foreground: #FFFFFF;
+  --destructive: #E5565B;
+  --destructive-foreground: #FFFFFF;
+  --positive: #1ED48C;
+  --negative: #E5565B;
+  --warning: #F2994A;
+  --savings: #AAECF5;
+  --border: #2A2D3B;
+  --input: #2A2D3B;
+  --ring: #0097FD;
+  --nav: #1D1E23;
+  --chart-1: #0097FD;
+  --chart-2: #1ED48C;
+  --chart-3: #F2994A;
+  --chart-4: #AAECF5;
+  --chart-5: #E5565B;
+  --chart-6: #8E9099;
+  --shadow-tile: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 12px 28px -16px rgba(0, 0, 0, 0.7);
+  --shadow-button: 0 10px 28px -14px rgba(0, 151, 253, 0.5);
+  --sidebar: #1D1E23;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #0097FD;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #2A2D3B;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #2A2D3B;
+  --sidebar-ring: #0097FD;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "tnum" 1, "lnum" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+/* Section block: a full-bleed surface separated by canvas gaps, like the reference. */
+@utility bank-section {
+  background-color: var(--color-background);
+  padding: 1.5rem 1.25rem;
+}
+
+@utility bank-tile {
+  background-color: var(--color-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-tile);
+}
+
+@utility bank-field {
+  background-color: var(--color-field);
+  color: var(--color-field-foreground);
+  border-radius: calc(var(--radius) - 4px);
+}
+
+@utility gradient-primary {
+  background-image: linear-gradient(180deg, var(--color-primary-glow), var(--color-primary));
+}
+
+@utility welcome-fade {
+  background-image: linear-gradient(
+    180deg,
+    oklch(0 0 0 / 0%) 0%,
+    oklch(0 0 0 / 35%) 45%,
+    oklch(0 0 0 / 92%) 70%,
+    oklch(0 0 0) 100%
+  );
+}
+
+@utility pb-nav {
+  padding-bottom: calc(6.5rem + env(safe-area-inset-bottom));
+}
+
+@utility safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-page-in {
+  animation: page-in 0.28s ease-out both;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@utility animate-pop-in {
+  animation: pop-in 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}

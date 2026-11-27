@@ -1,0 +1,2 @@
+grant update (name) on public.accounts to authenticated;
+create policy "Own accounts rename" on public.accounts for update to authenticated using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
