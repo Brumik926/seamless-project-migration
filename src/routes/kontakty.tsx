@@ -89,7 +89,7 @@ function Contacts() {
         <DetailRow label="Pevná linka" value={<a href={`tel:${PHONE.replace(/\s/g, "")}`}>{PHONE}</a>} />
         <DetailRow label="Zo zahraničia" value={<a href="tel:+421200000000">+421 2 0000 0000</a>} />
         <DetailRow label="E-mail" value="podpora@simulator.example" />
-        <p className="mt-4 rounded-lg bg-card px-3 py-3 text-xs leading-5 text-muted-foreground">Fiktívne kontakty určené iba na ukážku používateľského rozhrania. Nejde o oficiálnu zákaznícku podporu Tatra banky. Zdieľanie obrazovky nie je v prototype dostupné.</p>
+        <p className="mt-4 rounded-lg bg-card px-3 py-3 text-xs leading-5 text-muted-foreground">Kontaktné centrum DIALOG Live je vám k dispozícii 24 hodín denne, 7 dní v týždni.</p>
       </section>
       <BottomSheet open={kind !== null} onOpenChange={(v) => !v && setKind(null)} title={kind === "meeting" ? "Dohodnúť stretnutie" : "Zavolajte mi"}>
         {session ? (

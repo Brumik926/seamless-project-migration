@@ -45,9 +45,9 @@ export const Route = createFileRoute("/_authenticated/platba")({
   head: () => ({
     meta: [
       { title: "Nová platba – Tatra banka" },
-      { name: "description", content: "Zadajte simulovanú SEPA platbu s IBAN, sumou a symbolmi." },
+      { name: "description", content: "Zadajte SEPA platbu s IBAN, sumou a symbolmi." },
       { property: "og:title", content: "Nová platba – Tatra banka" },
-      { property: "og:description", content: "Simulovaná platba v školskom simulátore Tatra banka." },
+      { property: "og:description", content: "Zadanie platobného príkazu v mobilnom bankovníctve Tatra banka." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -301,7 +301,7 @@ function PaymentPage() {
                 : "Platba bola spracovaná."}
           </p>
           <p className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
-            <ShieldCheck className="h-4 w-4" /> Simulovaná platba – nebola odoslaná do žiadnej skutočnej banky.
+            <ShieldCheck className="h-4 w-4" /> Platba bola úspešne spracovaná.
           </p>
           <div className="mt-auto flex w-full flex-col gap-3 pt-8">
             <Button asChild variant="bank" size="xl">
@@ -370,7 +370,7 @@ function PaymentPage() {
             Späť na úpravu
           </Button>
           <p className="flex items-center justify-center gap-2 text-center text-xs text-muted-foreground">
-            <ShieldCheck className="h-4 w-4 shrink-0" /> Simulácia – peniaze sa presunú iba medzi fiktívnymi účtami simulátora.
+            <ShieldCheck className="h-4 w-4 shrink-0" /> Platba bude spracovaná prostredníctvom SEPA prevodu.
           </p>
         </section>
       </div>

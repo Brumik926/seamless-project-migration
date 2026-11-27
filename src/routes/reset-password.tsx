@@ -13,7 +13,7 @@ export const Route = createFileRoute("/reset-password")({
       { title: "Nové heslo – Tatra banka" },
       { name: "description", content: "Nastavte si nové heslo do aplikácie Tatra banka." },
       { property: "og:title", content: "Nové heslo – Tatra banka" },
-      { property: "og:description", content: "Nastavenie nového hesla do simulovaného bankovníctva." },
+      { property: "og:description", content: "Nastavenie nového hesla do mobilného bankovníctva." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],

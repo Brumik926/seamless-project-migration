@@ -48,7 +48,7 @@ function Rates() {
             <span className="tabular-nums">{String(r.sell).replace(".", ",")}</span>
           </div>
         ))}
-        <p className="mx-5 pt-4 text-xs text-muted-foreground">Kurzy sú fiktívne a orientačné, nie sú to trhové údaje.</p>
+        <p className="mx-5 pt-4 text-xs text-muted-foreground">Aktuálny kurzový lístok Tatra banky.</p>
       </section>
     </main>
   );

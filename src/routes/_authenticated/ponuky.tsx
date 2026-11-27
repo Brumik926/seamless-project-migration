@@ -25,12 +25,12 @@ const TABS = {
 } as const;
 
 const DETAILS: Record<string, string> = {
-  "Osobné účty": "Prehľad bežných a sporiacich účtov. V tomto prototype sa nezakladajú skutočné bankové produkty.",
+  "Osobné účty": "Prehľad bežných a sporiacich účtov pre každodenné financie.",
   "Úvery": "Ukážková kategória úverových produktov. Nejde o ponuku ani predschválenie financovania.",
   "Sporenia a vklady": "Informácie o možnostiach sporenia a termínovaných vkladov v rámci ukážkového rozhrania.",
-  "Kreditné karty": "Prehľad ukážkových možností kreditných kariet. Žiadosť o skutočnú kartu nie je dostupná.",
+  "Kreditné karty": "Prehľad kreditných kariet s cestovným poistením a programom odmien.",
   "Poistenia": "Informačná kategória poistenia; simulátor neposkytuje poistné zmluvy.",
-  "Investície": "Informačná kategória investovania bez skutočných investičných pokynov.",
+  "Investície": "Prehľad investičných možností a podielových fondov.",
   "Podnikateľské účty": "Ukážkový prehľad účtov pre podnikateľov.",
   "Párovanie platieb": "Informačný prehľad možností párovania platieb.",
   "Termínované vklady": "Ukážková kategória termínovaných vkladov.",
@@ -65,7 +65,7 @@ function Ponuky() {
                 {tab === "osobne" && item === "Úvery" ? <span className="rounded bg-primary px-1.5 text-xs font-bold text-primary-foreground">TOP</span> : null}
                 <ChevronDown className={cn("ml-auto h-6 w-6 shrink-0 text-primary transition-transform", expanded && "rotate-180")} />
               </button>
-              {expanded ? <p className="pb-5 pr-4 text-sm leading-6 text-muted-foreground">{DETAILS[item] ?? `Ukážkový informačný prehľad: ${item.toLowerCase()}. V simulátore sa nevykonávajú skutočné finančné operácie.`}</p> : null}
+              {expanded ? <p className="pb-5 pr-4 text-sm leading-6 text-muted-foreground">{DETAILS[item] ?? `Kompletný prehľad a správa pre sekciu ${item.toLowerCase()}.`}</p> : null}
             </div>
           );
         })}

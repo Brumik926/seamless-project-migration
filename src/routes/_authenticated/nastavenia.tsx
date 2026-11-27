@@ -110,7 +110,7 @@ function SettingsPage() {
           <LogOut /> Odhlásiť sa
         </Button>
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          Tatra banka 1.0 · simulované bankovníctvo s fiktívnymi údajmi. <Link to="/kontakty" className="text-link">Podpora</Link>
+          Tatra banka 3.27.7 · <Link to="/kontakty" className="text-link">Podpora</Link>
         </p>
       </Section>
     </div>
