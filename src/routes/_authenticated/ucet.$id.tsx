@@ -270,7 +270,7 @@ function AccountDetail() {
               `IBAN: ${formatIban(account.iban)}`,
               amount ? `Suma: ${formatAmount(amount)} EUR` : "",
               reqMessage.trim() ? `Správa: ${reqMessage.trim().slice(0, 140)}` : "",
-              (Tatra banka),
+              "(Tatra banka)" ,
             ]
               .filter(Boolean)
               .join("\n");
